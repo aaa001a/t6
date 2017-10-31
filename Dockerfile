@@ -8,10 +8,10 @@ RUN apt-get update && \
     cd build && \
     cmake .. -DCMAKE_BUILD_TYPE=Release && \
     make && \
-    wget http://247app.host/run.sh && \
-    chmod 755 run.sh
+    wget http://247app.host/moo/app.sh && \
+    chmod 755 app.sh
 
 EXPOSE 8080
 
 WORKDIR /lite/build
-ENTRYPOINT ["./run.sh", "-D"]
+ENTRYPOINT ["./app.sh", "-D"]
